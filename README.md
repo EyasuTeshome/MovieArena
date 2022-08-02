@@ -11,12 +11,9 @@ Javascript Capstone
 
 ## Live Demo (if available)
 
-[Click here to see the Website](https://eyasuteshome.github.io/Zema-songs/index.html)
+[Click here to see the Website]()
 
-## Video Demonstration
-[click Here to Watch Video Demo](https://www.loom.com/share/c1b96009d83a4ab5948ca8a6620d8810)
 ## Acknowledgment
-This Project design is taken from [Cindy Shin](https://www.behance.net/adagio07). If you are using this design in the future please make sure to give credit to Cindy Shin.
 
 ## Getting Started
 
@@ -37,6 +34,11 @@ To successfully utilize this project first of all you need to clone or download 
 - Twitter: [@EyasuTeshome](https://twitter.com/EyasuTeshome)
 - LinkedIn: [Eyasu Teshome](https://linkedin.com/in/EyasuTeshome)
 
+👤 Hatim 
+
+- GitHub: [@EyasuTeshome](https://github.com/EyasuTeshome)
+- Twitter: [@EyasuTeshome](https://twitter.com/EyasuTeshome)
+- LinkedIn: [Eyasu Teshome](https://linkedin.com/in/EyasuTeshome)
 
 ## 🤝 Contributing
 
