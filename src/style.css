@@ -24,6 +24,7 @@ nav {
 
 .nav-list li {
     cursor: pointer;
+    padding: 6px;
 }
 
 .logo {
