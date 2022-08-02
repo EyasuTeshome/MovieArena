@@ -1,1 +1,1 @@
-# Kanban
+# Javascript Capstone Project
