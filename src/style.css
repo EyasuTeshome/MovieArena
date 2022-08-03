@@ -62,28 +62,44 @@ nav {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
+  margin-top: 20px;
+ margin-bottom: 20px;
 }
 
 .mainlist {
   display: flex;
   flex-direction: column;
   list-style: none;
+  margin-right: 3rem;
+  margin-top: 1rem;
+  border: rgb(7, 35, 7) 2px solid;
 }
 
-.mainlist li {
+.mainlist span {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: 'Lobster', cursive;
-  font-size: 15px;
+  font-size: 17px;
+  color: white;
 }
 
-.mainlist li img {
-  width: 10rem;
-  height: 20rem;
+.mainlist span img {
+  width: 20rem;
+  height: 30rem;
+}
+
+.heart-value {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: rgb(7, 35, 7);
+}
+
+.open-comments {
+    width: 100%;
+    color: rgb(7, 35, 7);
 }
 
 footer {
