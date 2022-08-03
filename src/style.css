@@ -1,53 +1,107 @@
 @import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 body {
-    font-family: 'Mouse Memoirs', sans-serif;
-    font-size: 34px;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  font-family: 'Mouse Memoirs', sans-serif;
+  font-size: 34px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 nav {
-    background-color: rgb(7, 35, 7);
+  background-color: rgb(7, 35, 7);
 }
 
 .nav-list {
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-    margin: 0;
-    gap: 30px;
-    color: white;
-    list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  gap: 30px;
+  color: white;
+  list-style: none;
 }
 
 .nav-list li {
-    cursor: pointer;
-    padding: 6px;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.search-bar {
+  margin-right: 100px;
+}
+
+.search-bar input {
+  width: 300px;
+  line-height: 9px;
+  border-radius: 60px;
+}
+
+.search-bar button {
+  padding: 5px 8px;
+  border: none;
+  border-radius: 15px;
+  line-height: 22px;
 }
 
 .logo {
-    margin-right: 800px;
-    margin-left: 50px;
+  margin-right: 200px;
+  margin-left: 50px;
+}
+
+.container {
+  margin-top: 50px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#tableBody {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.mainlist {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.mainlist li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lobster', cursive;
+  font-size: 15px;
+}
+
+.mainlist li img {
+  width: 10rem;
+  height: 20rem;
 }
 
 footer {
-    background-color: rgb(7, 35, 7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  background-color: rgb(7, 35, 7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 svg {
-    width: 2rem;
-    height: 2rem;
-    margin-right: 1rem;
-    fill: aliceblue;
-    background-color: rgb(7, 35, 7);
-    transition: transform .1s;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  fill: aliceblue;
+  background-color: rgb(7, 35, 7);
+  transition: transform 0.1s;
 }
