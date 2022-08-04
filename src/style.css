@@ -77,10 +77,9 @@ nav {
   transition: all 0.3s ease-in-out;
 }
 
-.mainlist:hover { 
-        transition: all 0.3s ease-in-out;
-      }
-
+.mainlist:hover {
+  transition: all 0.3s ease-in-out;
+}
 
 .mainlist span {
   display: flex;
@@ -99,20 +98,20 @@ nav {
 }
 
 .likes {
-    background-color: rgb(7, 35, 7);
-    border: none;
-    color: white;
+  background-color: rgb(7, 35, 7);
+  border: none;
+  color: white;
 }
 
 .bi-heart:active {
-    color: red;
-    transform: scale(1.2);
+  color: red;
+  transform: scale(1.2);
 }
 
 .heartlike {
   display: flex;
   flex-direction: row;
-  background-color: rgb(7, 35, 7)
+  background-color: rgb(7, 35, 7);
 }
 
 .numb {
