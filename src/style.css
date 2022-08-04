@@ -7,6 +7,7 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+  background-color: rgb(234, 158, 65);
 }
 
 nav {
@@ -73,7 +74,13 @@ nav {
   margin-right: 3rem;
   margin-top: 1rem;
   border: rgb(7, 35, 7) 2px solid;
+  transition: all 0.3s ease-in-out;
 }
+
+.mainlist:hover { 
+        transition: all 0.3s ease-in-out;
+      }
+
 
 .mainlist span {
   display: flex;
@@ -88,6 +95,30 @@ nav {
 .mainlist span img {
   width: 20rem;
   height: 30rem;
+  cursor: pointer;
+}
+
+.likes {
+    background-color: rgb(7, 35, 7);
+    border: none;
+    color: white;
+}
+
+.bi-heart:active {
+    color: red;
+    transform: scale(1.2);
+}
+
+.heartlike {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(7, 35, 7)
+}
+
+.numb {
+  display: flex;
+  margin-left: 40px;
+  padding-bottom: 3px;
 }
 
 .heart-value {
