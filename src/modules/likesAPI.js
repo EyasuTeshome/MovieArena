@@ -1,34 +1,23 @@
-const URL_API = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/HtL80VFuEa9UDXYWP9te/likes/';
-const likesContainer = document.querySelector('.heartlike');
+/* eslint-disable */
+const fetchlikes = async () => {
+  alert('uio')
+  const data = fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/HtL80VFuEa9UDXYWP9te/likes/')
+  const response = await data;
+  const res = response.json();
+  console.log(res);
+  // console.log(likesAPI);
 
-const likes = () => {
-  likesContainer.addEventListener('click', (e) => {
-    const clicked = e.target.closest('.bi-heart');
-    // if (!clicked) return;
-    const item = clicked.getAttribute('id');
-    fetch(URL_API, {
-      method: 'POST',
-      headers: {
-        'Content-type': 'application/json',
-        Accept: 'application/json',
-      },
-      body: JSON.stringify({
-        item_id: item,
-      }),
-    });
-    fetch(URL_API).then((response) => response.json()).then((data) => {
-      const likeCount = document.querySelector(`.likes-${item}`);
-      likeCount.querySelector('.numb').textContent = `${data.filter((items) => items.item_id === item)[0].likes} likes`;
-    });
-  });
-};
+  const list = document.querySelector('.mainlist');
+list.addEventListener('click', () => {
+alert('done');
+if (e.target.className === 'bi bi-heart') {
+  addLikes(e.target.id);
+}
+})
+}
 
-const displayLikes = () => {
-  fetch(URL_API).then((response) => response.json()).then((data) => {
-    data.forEach((item) => {
-      const likeCount = document.querySelector(`.likes-${item.item_id}`);
-      likeCount.querySelector('.numb').textContent = `${item.likes} likes`;
-    });
-  }).catch((error) => error);
-};
-export { likes, displayLikes };
+
+
+fetchlikes();
+
+export default fetchlikes;

@@ -1,12 +1,9 @@
 /* eslint-disable */
 import './style.css';
 import './modules/likesAPI'
-import Arr from './modules/displayAPI';
-import { likes, displayLikes } from './modules/likesAPI';
+import Arr, { fetchMovies } from './modules/displayAPI';
+import fetchlikes from './modules/likesAPI';
 
-likes();
-displayLikes();
-
-
+Arr();
 
 
