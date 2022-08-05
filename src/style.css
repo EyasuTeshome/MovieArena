@@ -1,146 +1,167 @@
-@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+* {
+  font-family: 'Poppins', sans-serif;
+}
 
-body {
-  font-family: 'Mouse Memoirs', sans-serif;
-  font-size: 34px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background-color: rgb(234, 158, 65);
+main {
+  background: #dfdfde;
 }
 
 nav {
   background-color: rgb(7, 35, 7);
 }
 
-.nav-list {
+.header-list {
   display: flex;
-  flex-direction: row;
-  padding: 0;
-  margin: 0;
-  gap: 30px;
-  color: white;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+
+.header-list a {
+  text-decoration: none;
+}
+
+.header-list li {
   list-style: none;
 }
 
-.nav-list li {
-  cursor: pointer;
-  padding: 6px;
+.logo img {
+  height: 4rem;
 }
 
-.search-bar {
-  margin-right: 100px;
-}
-
-.search-bar input {
-  width: 300px;
-  line-height: 9px;
-  border-radius: 60px;
-}
-
-.search-bar button {
-  padding: 5px 8px;
-  border: none;
-  border-radius: 15px;
-  line-height: 22px;
-}
-
-.logo {
-  margin-right: 200px;
-  margin-left: 50px;
-}
-
-.container {
-  margin-top: 50px;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-#tableBody {
+.display-list-of-shows {
+  max-width: 82%;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
-.mainlist {
+.shows-container {
   display: flex;
-  flex-direction: column;
-  list-style: none;
-  margin-right: 3rem;
-  margin-top: 1rem;
-  border: rgb(7, 35, 7) 2px solid;
-  transition: all 0.3s ease-in-out;
+  justify-content: center;
+  padding-bottom: 100px;
 }
 
-.mainlist:hover {
-  transition: all 0.3s ease-in-out;
+.display-show {
+  width: 420px;
+  margin: 12px;
+  background-color: white;
+  padding: 8px;
 }
 
-.mainlist span {
+.title-like {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.show-likes {
+  margin: 0;
+}
+
+.display-show img {
+  width: 400px;
+  height: 500px;
+}
+
+.comment-submit-btn {
+  width: 250px;
+  margin-top: 20px;
+}
+
+.comment-btn {
+  width: 100%;
+}
+
+.button_p {
+  text-align: right;
+  margin: 0;
+}
+
+.close-button {
+  border: none;
+  background: none;
+  font-size: 35px;
+  color: rgb(49, 46, 206);
+}
+
+.pop-up {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+.pop-up-img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-family: 'Lobster', cursive;
-  font-size: 17px;
-  color: white;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
-.mainlist span img {
-  width: 20rem;
-  height: 30rem;
-  cursor: pointer;
-}
-
-.likes {
-  background-color: rgb(7, 35, 7);
-  border: none;
-  color: white;
-}
-
-.bi-heart:active {
-  color: red;
-  transform: scale(1.2);
-}
-
-.heartlike {
+.detail_container {
   display: flex;
-  flex-direction: row;
-  background-color: rgb(7, 35, 7);
+  justify-content: space-around;
 }
 
-.numb {
+.display-popup-show {
+  width: 60%;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 5%;
+  padding-bottom: 30px;
+}
+
+.like-comment-btns span {
+  font-size: 25px;
+}
+
+.show-title {
   display: flex;
-  margin-left: 40px;
-  padding-bottom: 3px;
+  justify-content: space-between;
+  padding-top: 15px;
+  font-size: 22px;
 }
 
-.heart-value {
+.heart-like {
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  background-color: rgb(7, 35, 7);
+  justify-content: space-evenly;
+  width: 30%;
 }
 
-.open-comments {
-  width: 100%;
-  color: rgb(7, 35, 7);
+.like-heart {
+  text-decoration: none;
+}
+
+.hide {
+  display: none;
+}
+
+.comment_container {
+  padding-left: 2%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form input {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  width: 80%;
+  border: solid rgb(54, 54, 54) 0.5px;
+  border-radius: 8px;
+  padding: 1%;
+}
+
+.submit_button {
+  background: rgb(16, 16, 212);
 }
 
 footer {
   background-color: rgb(7, 35, 7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 2rem;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  margin-top: 2rem;
 }
 
 svg {
@@ -149,5 +170,36 @@ svg {
   margin-right: 1rem;
   fill: aliceblue;
   background-color: rgb(7, 35, 7);
-  transition: transform 0.1s;
+  transition: transform .1s;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 481px) and (min-width: 768px) {
+  .detail_container {
+      display: flex;
+      flex-direction: column;
+      padding-left: 2%;
+  }
+  .pop-up-img img {
+      object-fit: cover;
+      width: 100%;
+      height: 580px;
+      border-radius: 8px;
+      padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) and (max-width: 1100px) {
+  .pop-up-img img {
+      object-fit: fill;
+      width: 100%;
+      height: 580px;
+      border-radius: 10px;
+      padding-bottom: 20px;
+  }
 }

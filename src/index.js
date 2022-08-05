@@ -1,8 +1,6 @@
-/* eslint-disable */
 import './style.css';
-import './modules/likesAPI'
-import Arr, { fetchMovies } from './modules/displayAPI';
+import { displayShows } from './modules/UI.js';
 
-Arr();
-
-
+document.addEventListener('DOMContentLoaded', async () => {
+  await displayShows();
+});
