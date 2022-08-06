@@ -1,5 +1,5 @@
 /* eslint-disable*/
-import fetchData from './APIhandler.js';
+import fetchData from './APIhandler';
 
 const displayListOfShows = document.querySelector('.display-list-of-shows');
 const showCounter = document.querySelector('.show-counter');
