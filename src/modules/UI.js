@@ -8,6 +8,17 @@ const popUp = document.querySelector('.pop-up');
 const commentPopUp = document.querySelector('.comment');
 const showsContainer = document.querySelector('.shows-container');
 
+const Likes = () => {
+    const likeButtons = document.getElementsByClassName('like-heart');
+    Array.from(likeButtons).forEach((likeButton) => {
+      likeButton.addEventListener('click', async (e) => {
+        await fetchData.submitLike(e.target.id);
+        // eslint-disable-next-line no-use-before-define
+        displayShows();
+      });
+    });
+  };
+
 const openPopUpWindow = () => {
   const commentButtons = document.getElementsByClassName('comment-btn');
   Array.from(commentButtons).forEach((commentButton) => {
