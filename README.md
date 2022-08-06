@@ -3,7 +3,7 @@
 This website presents the best Tv shows. We have used TVmaze API to get the movie content. we have used Javascript, HTML and CSS to build the website.
 ## Overview
 
-<img width="765" alt="Movie" src="MovieArena.png">
+<img width="765" alt="Movie" src="MovieArena.jpg">
 
 ## Built With
 
