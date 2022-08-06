@@ -39,9 +39,11 @@ To get a local copy up and running follow these simple example steps.
 To work on this project locally you need to have Node.js installed in your machine.
 
 ### Setup
-- You can download the file directly by downloading as a zip file directly from github.
-- Alternatively, you can clone the repository by running the; 
- git clone command.
+- To run this project, you need to:
+- VSCode
+- JavaScript/HTML&CSS extensions
+- NPM
+- Webpack
 
 ## Authors
 
@@ -51,7 +53,7 @@ To work on this project locally you need to have Node.js installed in your machi
 - Twitter: [@EyasuTeshome](https://twitter.com/EyasuTeshome)
 - LinkedIn: [Eyasu Teshome](https://linkedin.com/in/EyasuTeshome)
 
-👤 Hatim
+👤 Hatim Eddinani
 
 - GitHub: [@HatimDev](https://twitter.com/HatimDev)
 - Twitter: [@HatimDev-HE](https://github.com/HatimDev-HE)
