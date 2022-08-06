@@ -16,6 +16,6 @@ describe('comment counter tests', () => {
     expect(axios.get).toHaveBeenCalled();
   });
   test('test if link is correct', async () => {
-    expect(axios.get).toHaveBeenCalledWith('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/MYBVMigQRLz45iJjyYTt/comments?item_id=7');
+    expect(axios.get).toHaveBeenCalledWith('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/MYBVMigQRLz45iJjyYTt/comments?item_id=9');
   });
 });
