@@ -166,4 +166,11 @@ export const displayShows = async () => {
     .join('');
 
   displayListOfShows.innerHTML = values;
+
+  openPopUpWindow();
+  closePopUp();
+  showCount();
+  Likes();
 };
+
+export default {};

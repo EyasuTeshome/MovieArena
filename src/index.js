@@ -1,13 +1,8 @@
 /* eslint-disable*/
 
 import './style.css';
+import { displayShows } from './modules/UI.js';
 
-function component() {
-  const element = document.createElement('div');
-
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('body');
-  return element;
-}
-
-document.body.appendChild(component());
+document.addEventListener('DOMContentLoaded', async () => {
+  await displayShows();
+});
