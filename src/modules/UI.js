@@ -134,6 +134,12 @@ const closePopUp = () => {
   });
 };
 
+const showCount = async () => {
+    const numberOfShows = await fetchData.fetchTVAPI();
+    showCounter.innerHTML = `Best Shows(${numberOfShows.length})`;
+    return numberOfShows.length;
+  };
+
 export const displayShows = async () => {
   const showData = await fetchData.fetchTVAPI();
   const involveData = await fetchData.fetchInvolvementAPI();
