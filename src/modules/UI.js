@@ -19,6 +19,47 @@ const Likes = () => {
     });
   };
 
+  const commentCounter = (commentData) => commentData.length;
+
+const comments = () => {
+  const inputName = document.querySelector('.name_input');
+  const inputInsights = document.querySelector('.insight_input');
+  const selector3 = '.submit_button';
+  const commentCounterContainer = document.querySelector('.commnent-counter');
+  const commentContainer = document.querySelector('.comments-container');
+  document.addEventListener('click', async (e) => {
+    const el = e.target;
+    e.preventDefault();
+    if (!el.matches(selector3)) {
+      return;
+    }
+
+    if (inputInsights.value !== '' && inputName.value !== '') {
+      await fetchData.submitComment(
+        inputInsights.value,
+        el.id,
+        inputName.value,
+      );
+
+      let commentNumber = parseInt(
+        commentCounterContainer.innerHTML.slice(9),
+        10,
+      );
+      commentNumber += 1;
+      commentCounterContainer.innerHTML = `Comments(${commentNumber})`;
+      const comment = document.createElement('div');
+      comment.innerHTML = `
+        <span>${new Date().toISOString().split('T')[0]}</span>
+        <span>${inputName.value}</span>
+        <span>${inputInsights.value}</span>
+      `;
+      commentContainer.append(comment);
+      inputName.value = '';
+      inputInsights.value = '';
+    }
+  });
+};
+
 const openPopUpWindow = () => {
   const commentButtons = document.getElementsByClassName('comment-btn');
   Array.from(commentButtons).forEach((commentButton) => {
