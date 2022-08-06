@@ -10,11 +10,7 @@ This website presents the best Tv shows. We have used TVmaze API to get the movi
 - JavaScript
 - HTML
 - CSS
-## Over View
 
-<div>
-    <img src="MovieArena.png" alt="">
-</div>
 ## Live Demo
 
 [Live Demo Link](https://eyasuteshome.github.io/MovieArena/)
