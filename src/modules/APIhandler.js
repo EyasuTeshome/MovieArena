@@ -24,3 +24,32 @@ const fetchInvolvementAPI = async () => {
       },
     });
   };
+
+  const fetchInvolvementAPIcomments = async (id) => {
+    const commentsResponse = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/comments?item_id=${id}`);
+    const getCommentResult = await commentsResponse.json();
+    return getCommentResult;
+  };
+  
+  const submitComment = async (newComment, theId, newName) => {
+    await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appId}/comments`, {
+      method: 'POST',
+      body: JSON.stringify({
+        item_id: theId,
+        username: newName,
+        comment: newComment,
+  
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    });
+  };
+  
+  export default {
+    fetchTVAPI,
+    fetchInvolvementAPI,
+    submitLike,
+    fetchInvolvementAPIcomments,
+    submitComment,
+  };
