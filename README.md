@@ -1,9 +1,9 @@
 # MovieArena
 
 This website presents the best Tv shows. We have used TVmaze API to get the movie content. we have used Javascript, HTML and CSS to build the website.
-## Here is a desktop preview
+## Overview
 
-<img width="765" alt="Screen Shot 2021-12-08 at 6 16 50 PM" src="https://user-images.githubusercontent.com/34578631/147374937-00c9cb40-247f-466e-a2d4-f8ea6c6bcde7.png">
+<img width="765" alt="Movie" src="MovieArena.png">
 
 ## Built With
 
