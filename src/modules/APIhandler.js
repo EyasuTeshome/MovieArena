@@ -1,8 +1,8 @@
-const appId = 'HAFllv9WAhjonrhWoDqx';
+const appId = 'KFWAWpNuJb0b9FZEXp7P';
 const fetchTVAPI = async () => {
-  const TVResponse = await fetch('https://yts.mx/api/v2/list_movies.json?genre=animation');
+  const TVResponse = await fetch('https://api.tvmaze.com/shows');
   const getShowResult = await TVResponse.json();
-  return getShowResult;
+  return getShowResult.slice(6, 18);
 };
 
 const fetchInvolvementAPI = async () => {

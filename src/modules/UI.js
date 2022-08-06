@@ -1,7 +1,5 @@
 import fetchData from './APIhandler.js';
-// import tvm from './anime.png';
 
-// const logo = document.querySelector('.logo');
 const displayListOfShows = document.querySelector('.display-list-of-shows');
 const showCounter = document.querySelector('.show-counter');
 const mainPageText = document.querySelector('.main-page-text');
@@ -10,11 +8,6 @@ const popUp = document.querySelector('.pop-up');
 const commentPopUp = document.querySelector('.comment');
 const showsContainer = document.querySelector('.shows-container');
 
-// const headerLogo = () => {
-//   const myIcon = new Image();
-//   myIcon.src = tvm;
-//   return logo.append(myIcon);
-// };
 /* eslint-disable no-use-before-define */
 const Likes = () => {
   const likeButtons = document.getElementsByClassName('like-heart');
@@ -75,33 +68,33 @@ const openPopUpWindow = () => {
   const commentButtons = document.getElementsByClassName('comment-btn');
   Array.from(commentButtons).forEach((commentButton) => {
     commentButton.addEventListener('click', async (e) => {
-      const convertedData = await fetchData.fetchTVAPI();
-      const showData = convertedData.data.movies;
+      const showData = await fetchData.fetchTVAPI();
       const targetId = e.target.id;
       const commentData = await fetchData.fetchInvolvementAPIcomments(targetId);
       showsContainer.classList.add('hide');
       popUp.classList.remove('hide');
       commentPopUp.classList.remove('hide');
       mainPageText.classList.add('hide');
+      console.log(targetId);
       const selectedShow = showData.filter(
         (data) => data.id === Number(targetId),
       )[0];
-      console.log(targetId);
+
       popUp.innerHTML = `<div class="display-popup-show">
         <button type="button" data-close-button class="close-button">&times;</button>
          <div class="pop-up-img">  
-         <img src="${selectedShow.large_cover_image}" alt="">
-           <h3>${selectedShow.title}</h3>
+         <img src="${selectedShow.image.original}" alt="">
+           <h3>${selectedShow.name}</h3>
            <p>${selectedShow.summary}</p>
          </div>
          <div class="detail_container">
           <div>
             <p><strong>Language: </strong> ${selectedShow.language}</p>
-            <p><strong>Premiered: </strong> ${selectedShow.date_uploaded}</p>
+            <p><strong>Premiered: </strong> ${selectedShow.premiered}</p>
           </div>
         <div>
           <p><strong>Runtime: </strong>${selectedShow.runtime}</p>
-          <p><strong >Rating: </strong>${selectedShow.rating}</p>
+          <p><strong >Rating: </strong>${selectedShow.rating.average}</p>
         </div>
         </div>
         <hr>
@@ -153,27 +146,30 @@ const showCount = async () => {
   showCounter.innerHTML = `Best TV series of all times (${numberOfShows.length})`;
 };
 export const displayShows = async () => {
-  const convertedData = await fetchData.fetchTVAPI();
-  const showData = convertedData.data.movies;
+  const showData = await fetchData.fetchTVAPI();
   const involveData = await fetchData.fetchInvolvementAPI();
-  console.log(showData);
-  const values = showData.map((result) => `<div class="display-show">
-  <img src="${result.large_cover_image}" alt="">
-  <div class="title-like">
-    <p class="show-title">${result.title}</p>
-    <div class="heart-like">
-      <a class="like-heart" href="#">&#9825;</a>
-      <p class="show-likes">
-      ${
+
+  const values = showData
+    .map(
+      (result) => `<div class="display-show">
+    <img src="${result.image.original}" alt="">
+    <div class="title-like">
+      <p class="show-title">${result.name}</p>
+      <div class="heart-like">
+        <a id=${result.id} class="like-heart" href="#">&#9825;</a>
+        <p class="show-likes">${
   involveData.filter(
     (like) => parseInt(like.item_id, 10) === parseInt(result.id, 10),
-  )[0]
-}
-      </p> likes
+  )[0].likes
+}</p> likes
       </div>
     </div>
-    <button id =${result.id} class="btn btn-secondary comment-btn">Comments</button>
-    </div>`).join('');
+    <button id=${
+  result.id
+} class="btn btn-secondary comment-btn">Comments</button>
+    </div>`,
+    )
+    .join('');
 
   displayListOfShows.innerHTML = values;
 
