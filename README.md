@@ -17,7 +17,6 @@ This website presents the best Tv shows. We have used TVmaze API to get the movi
 </div>
 
 ## Live Demo
-
 [Live Demo Link](https://eyasuteshome.github.io/MovieArena/)
 
 ## Live video
